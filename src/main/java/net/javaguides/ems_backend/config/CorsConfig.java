@@ -1,4 +1,4 @@
-package com.example.emsbackend.config; // adjust to your package
+package net.javaguides.ems_backend.config; // adjust to your package
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +12,7 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        
+
         config.setAllowCredentials(true);
         config.addAllowedOrigin("https://chic-yeot-a0e1bc.netlify.app"); // your Netlify URL
         config.addAllowedHeader("*");
