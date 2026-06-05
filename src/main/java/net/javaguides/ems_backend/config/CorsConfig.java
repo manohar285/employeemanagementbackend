@@ -14,7 +14,7 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://chic-yeot-a0e1bc.netlify.app"); // your Netlify URL
+        config.addAllowedOrigin("https://employeemanagement-m9k7.onrender.com"); // your Netlify URL
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
 
