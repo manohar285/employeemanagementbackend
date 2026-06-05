@@ -1,26 +1,26 @@
-package net.javaguides.ems_backend.config; // adjust to your package
+    package net.javaguides.ems_backend.config; // adjust to your package
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
+    import org.springframework.web.cors.CorsConfiguration;
+    import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+    import org.springframework.web.filter.CorsFilter;
 
-@Configuration
-public class CorsConfig {
+    @Configuration
+    public class CorsConfig {
 
-    @Bean
-    public CorsFilter corsFilter() {
-        CorsConfiguration config = new CorsConfiguration();
+        @Bean
+        public CorsFilter corsFilter() {
+            CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://employeemanagement-m9k7.onrender.com"); // your Netlify URL
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
+            config.setAllowCredentials(true);
+            config.addAllowedOrigin("https://employeemanagement-1-c5bv.onrender.com"); // your render URL
+            config.addAllowedHeader("*");
+            config.addAllowedMethod("*");
 
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", config);
+            UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+            source.registerCorsConfiguration("/**", config);
 
-        return new CorsFilter(source);
+            return new CorsFilter(source);
+        }
     }
-}
