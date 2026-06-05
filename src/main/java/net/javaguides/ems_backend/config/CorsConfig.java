@@ -14,7 +14,7 @@
             CorsConfiguration config = new CorsConfiguration();
 
             config.setAllowCredentials(true);
-            config.addAllowedOrigin("https://employeemanagement-1-c5bv.onrender.com"); // your render URL
+            config.addAllowedOrigin("https://employeemanagement-exct.onrender.com"); // your render URL
             config.addAllowedHeader("*");
             config.addAllowedMethod("*");
 
